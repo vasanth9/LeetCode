@@ -3,8 +3,7 @@
  * @return {boolean}
  */
 var detectCapitalUse = function(word) {
-    if(word.toLowerCase()===word) return true;
-    if(word.toUpperCase()===word) return true;
-    if((word.charAt(0).toUpperCase()+word.toLowerCase().slice(1))===word) return true;
+    if(word.toLowerCase()===word || word.toUpperCase()===word || ((word.charAt(0).toUpperCase())+(word.toLowerCase().slice(1)))===word) return true;
+    
     return false;
 };
