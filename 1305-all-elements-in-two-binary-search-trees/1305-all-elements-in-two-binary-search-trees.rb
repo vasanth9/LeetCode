@@ -19,7 +19,6 @@ end
 def get_all_elements(root1, root2)
     a=[]
     b=print_elem(root1,a)
-    puts "hello"
     b=print_elem(root2,a)
     b.sort
 end
