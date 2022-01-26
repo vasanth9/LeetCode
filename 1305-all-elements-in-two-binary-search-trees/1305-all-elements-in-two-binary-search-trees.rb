@@ -10,15 +10,16 @@
 # @param {TreeNode} root1
 # @param {TreeNode} root2
 # @return {Integer[]}
-def print_elem(root, a)
-    return a if root == nil
-    print_elem(root.left, a)
-    a.append(root.val)
-    print_elem(root.right, a)
+
+def print_elem(root)
+    return if !root
+    print_elem(root.left)
+    @a.append(root.val)
+    print_elem(root.right)
 end
 def get_all_elements(root1, root2)
-    a=[]
-    b=print_elem(root1,a)
-    b=print_elem(root2,a)
-    b.sort
+    @a = []
+    print_elem(root1)
+    print_elem(root2)
+    @a.sort
 end
